@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionManifest
+	Version="5.0"
+	ExtensionBundleId="Skelotron"
+	ExtensionBundleVersion="0.5.7"
+	ExtensionBundleName="Skelotron"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ExtensionList>
+		<Extension Id="com.Skelotron.panel" Version="1.0" />
+		<Extension Id="com.Skelotron.modal" Version="1.0" />
+	</ExtensionList>
+	<ExecutionEnvironment>
+		<HostList>
+            <!-- Uncomment Host tags according to the apps you want your panel to support -->
+            <!-- Photoshop -->
+            <!-- <Host Name="PHXS" Version="15.0" /> -->
+            <!-- Illustrator -->
+             <!-- <Host Name="ILST" Version="18.0" /> -->
+            <!-- InDesign -->
+            <!-- <Host Name="IDSN" Version="[10.0,10.9]" /> -->
+            <!-- Premiere -->
+            <!-- <Host Name="PPRO" Version="[8.0,8.9]" /> -->
+            <!-- AfterEffects -->
+            <Host Name="AEFT" Version="13.0" />
+            <!-- PRELUDE -->
+            <!-- <Host Name="PRLD" Version="[3.0,3.9]" />   -->
+            <!-- FLASH Pro -->
+            <!-- <Host Name="FLPR" Version="[14.0,14.9]" /> -->
+
+		</HostList>
+		<LocaleList>
+			<Locale Code="All" />
+		</LocaleList>
+		<RequiredRuntimeList>
+			<RequiredRuntime Name="CSXS" Version="7" />
+		</RequiredRuntimeList>
+	</ExecutionEnvironment>
+	<DispatchInfoList>
+		<Extension Id="com.Skelotron.panel">
+			<DispatchInfo >
+				<Resources>
+				<MainPath>./html/index.html</MainPath>
+				<ScriptPath>./jsx/script.jsx</ScriptPath>
+				<CEFCommandLine>
+					<Parameter>--enable-nodejs</Parameter>
+   			</CEFCommandLine>
+				</Resources>
+				<Lifecycle>
+					<AutoVisible>true</AutoVisible>
+				</Lifecycle>
+				<UI>
+					<Type>Panel</Type>
+					<!-- The panel's name -->
+					<Menu>Skelotron</Menu>
+					<Geometry>
+						<Size>
+							<Height>300</Height>
+							<Width>300</Width>
+						</Size>
+						<MinSize>
+							<Width>40</Width>
+			        		<Height>40</Height>
+				    	</MinSize>
+					</Geometry>
+					<!-- <Icons>
+							<Icon Type="Normal">./img/icon.png</Icon>
+							<Icon Type="RollOver">./img/icon.png</Icon>
+							<Icon Type="DarkNormal">./img/icon.png</Icon>
+							<Icon Type="DarkRollOver">./img/icon.png</Icon>
+					</Icons> -->
+				</UI>
+			</DispatchInfo>
+		</Extension>
+
+		<Extension Id="com.Skelotron.modal">
+			<DispatchInfo >
+				<Resources>
+				<MainPath>./html/modal.html</MainPath>
+				<CEFCommandLine>
+					<Parameter>--enable-nodejs</Parameter>
+ 				</CEFCommandLine>
+				</Resources>
+				<Lifecycle>
+					<AutoVisible>true</AutoVisible>
+				</Lifecycle>
+				<UI>
+					<Type>ModalDialog</Type>
+					<Geometry>
+						<Size>
+							<Width>600</Width>
+			        		<Height>424</Height>
+				    </Size>
+				    <MinSize>
+							<Width>600</Width>
+			        		<Height>424</Height>
+				    </MinSize>
+					</Geometry>
+				</UI>
+			</DispatchInfo>
+		</Extension>
+
+	</DispatchInfoList>
+</ExtensionManifest>

@@ -1,0 +1,26 @@
+{
+  "name": "cep-skelotron",
+  "version": "1.0.0",
+  "description": "Simple Adobe CEP starter template",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Battle Axe",
+  "license": "ISC",
+  "devDependencies": {
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-csso": "^3.0.0",
+    "gulp-token-replace": "^1.1.2",
+    "gulp-uglify": "^3.0.0",
+    "gulp-yuicompressor": "^0.0.3",
+    "jsxbin": "^1.5.1",
+    "run-sequence": "^2.2.1",
+    "zxp-sign-cmd": "^1.0.0",
+    "gulp-include": "^2.3.1",
+    "gulp-replace": "^1.0.0",
+    "gulp-rename": "^1.4.0"
+  }
+}

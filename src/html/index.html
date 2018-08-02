@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../css/style.css"/>
+
+  <script src="../js/libs/vue.js"></script>
+
+  <script type="text/javascript">window.module = undefined</script>
+  <title>Skelotron</title>
+</head>
+
+<body>
+<script src="../js/libs/CSInterface.js"></script>
+
+
+<div id="app" v-bind:style="{'background-color': bgColor}">
+    <div class="content">
+        <div class="group">
+            <button v-on:click="getCompName()">Get Comp Name</button>
+            {{ compName }}
+        </div>
+
+        <div class="group">
+            <input type="text" placeholder="Rename layer" v-model="prefs.layerName"><br>
+            <input type="checkbox" class="option-checkbox" v-model="prefs.increment" v-on:click="savePrefs()">
+            <label for="autoBuild">Increment Names</label><br>
+            <button v-on:click="renameLayers()">Rename Layers</button>
+        </div>
+    </div>
+</div>
+
+
+<script src="../js/app.js"></script>
+</body>
+</html>
