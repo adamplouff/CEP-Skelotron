@@ -5,7 +5,7 @@ I'm very new to build systems and so one of the key features of this setup is th
 
 I am primarily an After Effects developer but this setup has been tested in Illustrator and Photoshop as well. Examples in this will be for AE but are applicable to other host apps.
 
-**Note:** [Vue][799ff047] is my framework of choice for managing what happens within the panel. All of the
+**Note:** [Vue][799ff047] is my framework of choice for managing what happens within the panel. All of the main stuff may be moved out of Vue and used however you like.
 
 ## Features
 - Reloading of the jsx file with *right-click > reload* to refresh your code
