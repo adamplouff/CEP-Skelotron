@@ -10,7 +10,7 @@ I am primarily an After Effects developer but this setup has been tested in Illu
 ## Features
 - Reloading of the jsx file with *right-click > reload* to refresh your code
 - Simplified data transfer between panel and host app that handles jsoning the data and promises for returning data from the app
- - `evalScript('jsxFuncName', objectToSendToHostApp)`
+    - `evalScript('jsxFuncName', objectToSendToHostApp)`
 - Modal popup
 - Preference file saving (must be saved outside of the signed extension)
 - Basic gulp setup for packaging up the extension
@@ -21,8 +21,8 @@ I am primarily an After Effects developer but this setup has been tested in Illu
 1. Download the repo and we'll call this the project file
 - Do a search and replace for all the files  for ***Skelotron*** and name it something brutal. I used [Atom][799ff027] *Find in Project* for this.
 - Create a symbolic link ([OS X][799ff029]/[Windows][799ff031]) from the **/src** folder to the Adobe Extensions folder. This allows you work with your project folder wherever you want it and still have it open in After Effects. *note: you can rename this symlinked **/src** folder to anything you want.*
- - [Mac]: /Users/**username**/Library/Application Support/Adobe/CEP/extensions/
- - [Win]: C:/Users/**username**/AppData/Roaming/Adobe/CEP/extensions/
+    - [Mac]: /Users/**username**/Library/Application Support/Adobe/CEP/extensions/
+    - [Win]: C:/Users/**username**/AppData/Roaming/Adobe/CEP/extensions/
 - Download [ZXP Installer][799ff035]. Open it and navigate to settings. In here you can **enable extension debugging** which allows you to open and use unsigned (in progress) extensions.
 - Open After Effects and navigate to Window > Extensions > **Brutal tool name**
 - Inside of **/src** you can edit the **index.html**, **style.css**, **app.js** and **script.jsx** all you want to make it look cool and do great stuff. Bonus points if you use **modal.html** and **modal.js**.
@@ -36,9 +36,9 @@ Once you're all done and want to share with someone else you need to sign the ex
 1. Download [ZXPSignCmd][799ff037].
 - Open terminal and **cd** to the location of the downloaded ZXPSignCmd
 - Type a string similar to this:
- - `./ZXPSignCmd -selfSignedCert US GA "Battle Axe" "Adam Plouff" password cert.p12`
- - Which roughly equates to:
- - ./ZXPSignCmd -selfSignedCert [Country] [State] "[Company]" "[Author]" [password] cert.p12
+    - `./ZXPSignCmd -selfSignedCert US GA "Battle Axe" "Adam Plouff" password cert.p12`
+    - Which roughly equates to:
+    - ./ZXPSignCmd -selfSignedCert [Country] [State] "[Company]" "[Author]" [password] cert.p12
 - Place this new **cert.p12** file in the main project folder with the **Gulp.js** file
 
 ### Setup
