@@ -1,5 +1,5 @@
 # Skelotron - CEP skeleton template
-[Adobe CEP][799ff023] is unnecessarily difficult to start using. There's a lot to learn and I don't claim to know it all but this is my simplified setup for building new tools with this fantastically powerful platform. [This book][799ff025] helped me a lot with understanding how data is transferred between the panel and host app and I recommend highly it.
+[Adobe CEP][799ff023] can feel pretty overwhelming to start using. There's a lot to learn and I don't claim to know it all but this is my simplified setup for building new tools with this fantastically powerful platform. [This book][799ff025] helped me a lot with understanding how data is transferred between the panel and host app and I recommend highly it.
 
 I'm very new to build systems and so one of the key features of this setup is the ability to reload the panel with a right click and refresh the jsx at the same time –without having to build or close host app.
 
