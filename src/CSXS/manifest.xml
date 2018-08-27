@@ -78,6 +78,7 @@
 				<MainPath>./html/modal.html</MainPath>
 				<CEFCommandLine>
 					<Parameter>--enable-nodejs</Parameter>
+					<Parameter>--mixed-context</Parameter>
  				</CEFCommandLine>
 				</Resources>
 				<Lifecycle>
