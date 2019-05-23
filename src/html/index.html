@@ -14,18 +14,18 @@
 <script src="../js/libs/CSInterface.js"></script>
 
 
-<div id="app" v-bind:style="{'background-color': bgColor}">
+<div id="app" v-bind:style="{'background-color': bgColor}" v-cloak>
     <div class="content">
         <div class="group">
-            <button v-on:click="getCompName()">Get Comp Name</button>
+            <div class="func-button" v-on:click="getCompName()">Get Comp Name</div>
             {{ compName }}
         </div>
 
         <div class="group">
-            <input type="text" placeholder="Rename layer" v-model="prefs.layerName"><br>
+            <input type="text" class="textbox" placeholder="Rename layer" v-model="prefs.layerName"><br>
             <input type="checkbox" class="option-checkbox" v-model="prefs.increment" v-on:click="savePrefs()">
             <label for="autoBuild">Increment Names</label><br>
-            <button v-on:click="renameLayers()">Rename Layers</button>
+            <div class="func-button" v-on:click="renameLayers()">Rename Layers</div>
         </div>
     </div>
 </div>

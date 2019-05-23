@@ -3,13 +3,13 @@
     <Extension Id="com.Skelotron.panel">
         <HostList>
           <!-- AfterEffects -->
-          <Host Name="AEFT" Port="8093" />
+          <Host Name="AEFT" Port="8073" />
         </HostList>
     </Extension>
     <Extension Id="com.Skelotron.modal">
         <HostList>
           <!-- AfterEffects -->
-          <Host Name="AEFT" Port="8083" />
+          <Host Name="AEFT" Port="8063" />
         </HostList>
     </Extension>
 </ExtensionList>

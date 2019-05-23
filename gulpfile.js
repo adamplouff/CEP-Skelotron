@@ -13,6 +13,7 @@ var gulp          = require('gulp'),
     destinationFolder   = 'Install/',
     sourceFolder        = 'src/',
     panelName           = 'Skelotron';
+    compressed          = true;
 
 
 gulp.task('clean', function () {
@@ -39,7 +40,7 @@ gulp.task('compress-css', function () {
 });
 
 gulp.task('compress-files', function (callback) {
-  runSequence('copy', ['compress-css', 'compress-js', 'jsxbin'], callback);
+  runSequence('copy', ['compress-css', 'compress-js', 'compress-jsx'], callback);
 })
 
 gulp.task('compress-jsx', function () {

@@ -1,5 +1,5 @@
 {
-  "name": "cep-skelotron",
+  "name": "cep-Skelotron",
   "version": "1.0.0",
   "description": "Simple Adobe CEP starter template",
   "main": "gulpfile.js",
@@ -22,5 +22,8 @@
     "gulp-include": "^2.3.1",
     "gulp-replace": "^1.0.0",
     "gulp-rename": "^1.4.0"
+  },
+  "dependencies": {
+    "natives": "^1.1.6"
   }
 }

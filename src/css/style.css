@@ -1,7 +1,20 @@
-body {
-    color: #fff;
-    opacity: 0.8;
+@font-face {
+  font-family: 'Roboto';
+  src: url('file:../font/Roboto-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  src: url('file:../font/RobotoMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body, pre {
+    color: #d2d2d2;
     overflow-x: hidden;
+    overflow: hidden;
     -webkit-user-select: none;
     cursor: default;
     font-family: 'Roboto', sans-serif;
@@ -9,37 +22,271 @@ body {
     line-height: 1.5em;
     letter-spacing: 0.05em;
     margin: 0;
+    min-width: 190px;
+    /* background-color: #111; */
 }
-
 #app {
     height: 100vh;
+    box-sizing: border-box;
+    border: solid 2px rgba(3, 119, 187, 0);
+}
+[v-cloak] {
+  display: none;
+}
+.content {
+    padding: 0 8px;
+    height: 100%;
+    overflow-y: scroll;
+    padding-right: 24px;
+    margin-right: -16px;
+}
+#app.drop-highlight {
+    border: solid 2px rgba(3, 119, 187, 1);
 }
 a {
     color: #fff;
 }
-.content {
-    padding: 0 8px;
+.header {
+    padding-left: 8px;
+    background-color: rgba(1,1,1,0.1);
+}
+.header>div {
+    display: inline-block;
+}
+.footer {
+    z-index: 1;
+    bottom: 0;
+    position: absolute;
+    width: 100vw;
+    background-color: #0377BC;
+    text-align: center;
+    padding: 4px;
+    padding-right: 32px;
+    line-height: 1.15em;
+    /* white-space: pre-wrap; */
+    word-wrap: break-word;
+    font-family: inherit;
+}
+.lift-enter-active, .lift-leave-active {
+  transition: opacity .5s;
+  transition: margin-bottom .5s;
+}
+.lift-enter, .lift-leave-to {
+  opacity: 0;
+  margin-bottom: -30px;
+}
+.message {
+    vertical-align: middle;
+}
+.row {
+    /* width: 100%;
+    float: left; */
+    display: block;
+    min-width: 190px;
+}
+.tab-name {
+    width: 50px;
+    text-transform: capitalize;
+    position: relative;
+    /* font-family: 'Roboto Mono', monospace; */
+    font-size: 12px;
+    vertical-align: middle;
+    text-align: center;
+}
+.tab>svg {
+    fill: rgb(172, 212, 6);
+}
+.group-heading {
+    position: relative;
+    /* font-family: 'Roboto Mono', monospace; */
+    text-transform: uppercase;
+    font-size: 10px;
+    vertical-align: middle;
+    padding: 4px 0 6px 0;
+    display: block;
+    height: 12px;
+    overflow: hidden;
+    letter-spacing: 0.1em;
 }
 
 
-button {
-  border: none;
-  font-family: 'Roboto Mono', monospace;
-  text-transform: uppercase;
-  background-color: #393939;
-  color: #dddddd;
-  margin: 1px;
+
+.button {
+    border: none;
+    /* font-family: 'Roboto Mono', monospace; */
+    /* text-transform: uppercase; */
+    background-color: #393939;
+    color: #dddddd;
+    /* margin: 1px; */
+    display: inline-block;
+}
+.nav {
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 2px;
+    height: 28px;
+    width: 36px;
 }
 button:focus {
-  outline: 0;
+    outline: 0;
 }
 button:hover {
-  background-color: #0377BC;
+    background-color: #0377BC;
 }
 button.selected {
     background-color: rgba(255, 255, 255, 0.15);
 }
-
+.button-group {
+    /* width: auto;
+    margin-bottom: 4px; */
+    display: inline;
+    /* float: left; */
+}
+.button-group>.button {
+    background-color: rgba(255, 255, 255, 0.08);
+    box-sizing: border-box;
+    /* border: 1px solid rgba(0, 0, 0, 0); */
+    /* min-width: 39%; */
+    display: inline-block;
+    height: 24px;
+    margin: 0;
+    padding: 5px 10px 0 2px;
+    /* text-transform: uppercase; */
+    font-size: 10px;
+    overflow: hidden;
+}
+.button>span.icon {
+    float: left;
+    margin-right: 2px;
+    margin-top: -2px;
+}
+.button>span.icon>svg {
+    width: 18px;
+    height: 18px;
+    fill: #d2d2d2;
+}
+.button-group>.selected {
+    background-color: rgba(255, 255, 255, 0.15);
+    /* border: 1px solid rgba(255, 255, 255, 0.6); */
+    border-radius: 1px;
+}
+button.full-width {
+    width: 100%;
+    height: 32px;
+    padding-bottom: 4px;
+}
+.group {
+    border-bottom: solid 1px rgba(128, 128, 128, 0.2);
+    vertical-align: middle;
+    margin-bottom: 4px;
+    float: left;
+    width: 100%;
+}
+.build-location {
+    border-bottom: solid 1px rgba(128, 128, 128, 0.2);
+}
+.fold-group {
+    border-top: solid 1px rgba(128, 128, 128, 0.2);
+    float: left;
+    margin-bottom: 4px;
+    width: 100%;
+    /* height: auto; */
+    /* overflow-y: hidden; */
+}
+.fold-content {
+    padding-bottom: 4px;
+    float: left;
+    width: 100%;
+}
+.fold-icon {
+    float: right;
+    margin-top: -2px;
+    fill: #d2d2d2;
+    height: 18px;
+    transform-origin: 50% 50%;
+    transition: all 0.15s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+.fold-icon.flip {
+    transform: rotate(-90deg);
+}
+.io-sketch {
+    overflow: hidden;
+}
+.import {
+    /* float: right; */
+    padding: 4px 2px 0 3px;
+}
+.help {
+    float: right;
+    padding-top: 4px;
+    padding-right: 3px;
+    fill: #fff;
+}
+.func-button {
+    /* border: 1px solid rgba(255, 255, 255, 0.15); */
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 2px;
+    display: block;
+    padding: 3px 8px;
+    margin: 6px 0;
+    /* text-transform: uppercase; */
+    /* font-family: 'Roboto Mono', monospace; */
+    font-size: 10px;
+}
+.func-button svg {
+    margin-right: 4px;
+    width: 18px;
+    height: 18px;
+    fill: #d2d2d2;
+    margin-bottom: -5px;
+}
+.build-button {
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 2px;
+    display: block;
+    padding: 6px 8px;
+    margin-bottom: 8px;
+    vertical-align: middle;
+    max-height: 64px;
+}
+.build-comp {
+    font-style: italic;
+    text-transform: uppercase;
+}
+.artboard-name {
+    color: #eee;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.collection-item:hover, .build-button:hover, .dropup:hover .dropbtn, .func-button:hover {
+    /* background-color: rgba(0, 0, 0, 0.2); */
+}
+span.badge {
+    float: right;
+    background-color: #474747;
+    border: #393939 solid 1px;
+    border-radius: 4px;
+    padding: 2px 4px;
+    margin-top: 5px;
+}
+span.badge.new {
+    background-color: #0377BC;
+}
+.nav .badge.new {
+    border-radius: 6px;
+    padding: 3px 3px;
+    top: 9px;
+    margin-left: 9px;
+    position: absolute;
+}
+span.icon {
+    margin-right: 4px;
+}
+span.dropdown {
+    float: right;
+    background-color: #0377BC;
+}
 .tooltiptext {
     visibility: hidden;
     float: none;
@@ -60,7 +307,6 @@ button.selected {
     position: absolute;
     z-index: 1;
     margin-top: 2px;
-    /* margin-right: -20px; */
 
     opacity: 0;
     transition: opacity 0.3s;
@@ -70,36 +316,38 @@ button.selected {
     visibility: visible;
     opacity: 1;
 }
-input {
-    box-sizing: border-box;
-    -webkit-appearance: none;
-    outline: none;
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.75);
-    width: 100px;
-    font-family: 'Roboto Mono', monospace;
-    color: #f0f0f0;
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .3s;
 }
-.group {
-    /* display: inline-block; */
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+input.textbox {
+    font-family: 'Roboto Mono', monospace;
+    width: auto;
+    padding: 4px 8px;
+    margin: 8px -18px 0 0;
+    border: none;
+}
+.option {
     height: 16px;
-    margin-bottom: 2px;
-    padding-bottom: 16px;
+    margin-bottom: 4px;
+    margin-left: -2px;
+    float: left;
+    width: 100%;
 }
 .option-checkbox {
     box-sizing: border-box;
     -webkit-appearance: none;
-    /* background-color: #fafafa; */
 	border: 1px solid rgba(255, 255, 255, 0.75);
-	/* box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05); */
 	padding: 5px;
 	border-radius: 1px;
 	display: inline-block;
 	position: relative;
-    vertical-align: middle;
+    vertical-align: bottom;
     outline: 0;
-    width: 10px;
-    margin: -2px 0 0 0;
 }
 .option-checkbox:checked:after {
     background-color: rgba(255, 255, 255, 0.75);
@@ -108,4 +356,18 @@ input {
     margin: -4px;
     content: ' ';
     position: absolute;
+}
+select {
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    overflow: scroll;
+    outline: 0;
+    background-color: rgba(255, 255, 255, 0.15);
+	border: 1px solid rgba(255, 255, 255, 0.75);
+    padding: 1px 4px;
+    margin-left: 4px;
+    border-radius: 1px;
+    color: #f0f0f0;
+    /* font-family: 'Roboto Mono', monospace; */
+    width: 40px;
 }
