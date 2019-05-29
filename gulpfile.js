@@ -28,9 +28,11 @@ gulp.task('copy', ['clean'], function () {
 });
 
 gulp.task('compress-js', function () {
-      return gulp.src(destinationFolder + panelName + '/**/*.js')
-    .pipe(uglify())
-        .pipe(gulp.dest(destinationFolder + panelName));
+    return gulp.src(destinationFolder + panelName + '/**/*.js')
+    .pipe(uglify().on('error', function(e){
+          console.log(e);
+       }))
+    .pipe(gulp.dest(destinationFolder + panelName));
 });
 
 gulp.task('compress-css', function () {
